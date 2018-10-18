@@ -134,10 +134,11 @@ Pregunta p1;
             if(radios[i].isSelected()){
             indiceSeleccionado=i;
             break;
-            }
+         
+                }
         }
-        
-        JOptionPane.showConfirmDialog(this,""+ evaluar(p1,radios[indiceSeleccionado]));
+        System.out.println("El indice seleccionado es :"+indiceSeleccionado);
+       JOptionPane.showConfirmDialog(this,""+evaluar(p1,indiceSeleccionado));
     }//GEN-LAST:event_checarrespuestaActionPerformed
 
     /**
@@ -163,19 +164,12 @@ Pregunta p1;
     private javax.swing.JRadioButton radioOp5;
     // End of variables declaration//GEN-END:variables
 
-public boolean evaluar(Pregunta p, JRadioButton r){
-boolean correcta=false;
-//Logica de validacion ??
-for(int i=0;i<p.opciones.length;i++){
-if(opciones[i].titulo.equals(r.getText())){
-   if(p1.opciones[i].correcta){
-       correcta=true;
-       break;
-   }
-          
-}
-}
-return correcta;
+public boolean evaluar(Pregunta p, int indiceSeleccionado){
+        boolean correcta=false;
+        if(p.opciones[indiceSeleccionado].correcta){
+        correcta=true;
+        }
+        return correcta;
 }
 
 }
