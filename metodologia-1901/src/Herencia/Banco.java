@@ -12,21 +12,23 @@ package Herencia;
 public class Banco {
     
     public static void main(String[] args) {
-        //Primero creamos una tarjeta de tipo "credito"
-        TarjetaCredito t1=new TarjetaCredito();
-        //Le asignamos un numero
-        t1.setNumero(666);
-        
-        
-        
-        //TarjetaAhorro t2=new TarjetaAhorro();
-       // t2.setNumero(4321);
-        
-        //TarjetaNomina t3=new TarjetaNomina();
-       // t3.numero=-666;
-     
-        System.out.println("El numero de la tarjeta t3 es: " +t1.getNumero());
-        
+       //Crear la tarjeta de credito
+       TarjetaCredito tcredito=new TarjetaCredito();
+       tcredito.setNumero(1234);
+       tcredito.setNombre("banamex");
+       tcredito.setTipo("credito");
+       
+       TarjetaAhorro tahorro=new TarjetaAhorro();
+       tahorro.setNumero(4321);
+       tahorro.setNombre("bancomer");
+       tahorro.setTipo("ahorro");
+       
+       TarjetaNomina tnomina=new TarjetaNomina();
+       tnomina.setNumero(7777);
+       tnomina.setNombre("hsbc");
+       tnomina.setTipo("nomina");
+       //Agregar a cada tarjeta un nombre que sea el nombre del banco de la tarjeta
+       //, "banamex" y otro atributo que diga tipo e indique "debito" o "credito"
        
     }
 }
